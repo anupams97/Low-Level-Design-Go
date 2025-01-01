@@ -1,8 +1,8 @@
 package main
 
 import (
-	"awesomeProject/TemplatePattern/otpflow"
 	"fmt"
+	"github.com/anupams97/Low-Level-Design-Go/DesignPatterns/TemplatePattern/otpflow"
 )
 
 func main() {
