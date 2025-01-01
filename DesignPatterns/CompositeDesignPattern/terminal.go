@@ -1,7 +1,7 @@
 package main
 
 import (
-	"awesomeProject/CompositeDesignPattern/filesystem"
+	"github.com/anupams97/Low-Level-Design-Go/DesignPatterns/CompositeDesignPattern/filesystem"
 )
 
 func main() {

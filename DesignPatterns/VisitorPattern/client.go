@@ -1,8 +1,8 @@
 package main
 
 import (
-	"awesomeProject/VisitorPattern/shape"
 	"fmt"
+	"github.com/anupams97/Low-Level-Design-Go/DesignPatterns/VisitorPattern/shape"
 )
 
 func main() {
