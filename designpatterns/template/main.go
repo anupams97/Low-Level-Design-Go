@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/anupams97/Low-Level-Design-Go/DesignPatterns/TemplatePattern/otpflow"
+	"github.com/anupams97/Low-Level-Design-Go/designpatterns/template/otpflow"
 )
 
 func main() {

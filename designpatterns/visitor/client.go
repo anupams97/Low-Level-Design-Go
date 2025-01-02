@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/anupams97/Low-Level-Design-Go/DesignPatterns/VisitorPattern/shape"
+	"github.com/anupams97/Low-Level-Design-Go/designpatterns/visitor/shape"
 )
 
 func main() {
