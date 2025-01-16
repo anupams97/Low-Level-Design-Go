@@ -37,6 +37,7 @@ func (c *LRUCache) Put(k, v string) {
 		node.Value = v
 		// put the node in front
 		c.moveToHead(node)
+		return
 	}
 	newNode := &Node{Key: k, Value: v}
 	c.cache[k] = newNode
