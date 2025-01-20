@@ -4,6 +4,7 @@ import (
 	"fmt"
 	f "github.com/anupams97/Low-Level-Design-Go/designpatterns/decorator/firstexample"
 	s "github.com/anupams97/Low-Level-Design-Go/designpatterns/decorator/secondexample"
+	"math/rand/v2"
 )
 
 func main() {
@@ -26,4 +27,18 @@ func main() {
 	coffeeWithWhippedCream := s.AddOns(coffeeWithIceCream, "whipped cream")
 	fmt.Println("With Ice Cream & Whipped Cream:", coffeeWithWhippedCream())
 
+	fn := Decorate2x(getRandom)
+	fmt.Println(fn(), fn())
+}
+
+func getRandom() int {
+	r := rand.IntN(10)
+	fmt.Printf("Log r=%d\n", r)
+	return r
+}
+
+func Decorate2x(fn func() int) func() int {
+	return func() int {
+		return fn() * 2
+	}
 }
