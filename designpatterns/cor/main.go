@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"github.com/anupams97/Low-Level-Design-Go/designpatterns/cor/accesscontrol"
+)
 
 type handler interface {
 	handle(request int)
@@ -25,11 +28,30 @@ func (d *denominationHandler) setNextHandler(next handler) {
 }
 
 func main() {
-	a := 900
+	//a := 900
 	h500 := &denominationHandler{denomination: 500}
 	h100 := &denominationHandler{denomination: 100}
 
 	h500.setNextHandler(h100)
 
-	h500.handle(a)
+	fmt.Println("_______")
+	u1 := &accesscontrol.User{
+		Name:            "Anupam",
+		Role:            "Admin",
+		IsAuthenticated: true,
+		IsBanned:        false,
+	}
+	u2 := &accesscontrol.User{
+		Name:            "Dave",
+		Role:            "nil",
+		IsAuthenticated: true,
+		IsBanned:        false,
+	}
+	authH := &accesscontrol.AuthHandler{}
+	roleH := &accesscontrol.RoleHandler{}
+	banH := &accesscontrol.BanHandler{}
+	authH.SetNext(roleH)
+	roleH.SetNext(banH)
+	authH.Handle(u1)
+	authH.Handle(u2)
 }
