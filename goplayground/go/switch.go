@@ -1,8 +1,8 @@
-package goplayground
+package _go
 
 import "fmt"
 
-func main() {
+func mainN() {
 	whoami := func(i interface{}) {
 		switch i.(type) {
 		case bool:

@@ -1,6 +1,7 @@
 package main
 
 import (
+	"errors"
 	"fmt"
 	f "github.com/anupams97/Low-Level-Design-Go/designpatterns/decorator/firstexample"
 	s "github.com/anupams97/Low-Level-Design-Go/designpatterns/decorator/secondexample"
@@ -29,6 +30,12 @@ func main() {
 
 	fn := Decorate2x(getRandom)
 	fmt.Println(fn(), fn())
+
+	err := withRetry(doSomething, 10)()
+	if err != nil {
+		fmt.Println("Final error:", err)
+	}
+
 }
 
 func getRandom() int {
@@ -40,5 +47,29 @@ func getRandom() int {
 func Decorate2x(fn func() int) func() int {
 	return func() int {
 		return fn() * 2
+	}
+}
+
+func doSomething() error {
+	r := rand.IntN(10)
+	if r > 8 {
+		fmt.Println("success")
+		return nil
+	}
+	return errors.New("failed")
+}
+
+func withRetry(fn func() error, attempts int) func() error {
+	return func() error {
+		var lastErr error
+		for i := 0; i < attempts; i++ {
+			err := fn()
+			if err == nil {
+				return nil // success
+			}
+			fmt.Printf("Attempt %d failed: %v\n", i, err)
+			lastErr = err
+		}
+		return fmt.Errorf("all %d attempts failed: %w", attempts, lastErr)
 	}
 }

@@ -1,0 +1,34 @@
+{
+  "collection": {
+    "size": 5,
+    "traits": [
+      {
+        "trait_type": "ear",
+        "values": [
+          "small",
+          "big",
+          "pointy",
+          "round"
+        ]
+      },
+      {
+        "trait_type": "mouth",
+        "values": [
+          "smile",
+          "frown",
+          "neutral",
+          "open"
+        ]
+      },
+      {
+        "trait_type": "nose",
+        "values": [
+          "small",
+          "big",
+          "sharp",
+          "flat"
+        ]
+      }
+    ]
+  }
+}

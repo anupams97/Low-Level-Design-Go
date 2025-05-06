@@ -1,4 +1,4 @@
-package goplayground
+package _go
 
 import (
 	"container/heap"
@@ -24,7 +24,7 @@ func (h *MinHeap) Pop() any {
 	return x
 }
 
-func main() {
+func mainH() {
 	h := &MinHeap{5, 3, 8, 1}
 	heap.Init(h) // Convert to a min-heap
 

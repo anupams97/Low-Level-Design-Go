@@ -1,8 +1,8 @@
-package goplayground
+package _go
 
 import "fmt"
 
-func main() {
+func mainA() {
 	var a [2]int
 	fmt.Println(a)
 	a[1] = 5
@@ -15,7 +15,7 @@ func main() {
 
 	d := [...]int{10, 20, 10: 40}
 	fmt.Println(d)
-	
+
 	x := [][]int{{1, 5, 3}, {4, 5, 6}}
 	fmt.Println(x)
 

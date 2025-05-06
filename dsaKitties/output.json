@@ -1,0 +1,38 @@
+
+
+[
+  {
+    "name": "Character 1",
+    "attributes": [
+      {
+        "trait_type": "ear",
+        "value": "small"
+      },
+      {
+        "trait_type": "mouth",
+        "value": "smile"
+      },
+      {
+        "trait_type": "nose",
+        "value": "sharp"
+      }
+    ]
+  },
+  {
+    "name": "Character 2",
+    "attributes": [
+      {
+        "trait_type": "ear",
+        "value": "big"
+      },
+      {
+        "trait_type": "mouth",
+        "value": "frown"
+      },
+      {
+        "trait_type": "nose",
+        "value": "flat"
+      }
+    ]
+  }
+]

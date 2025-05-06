@@ -1,11 +1,11 @@
-package goplayground
+package _go
 
 import (
 	"container/list"
 	"fmt"
 )
 
-func main() {
+func mainQ() {
 	l := list.New() // Create a new linked list
 
 	// Add elements to the front

@@ -1,11 +1,11 @@
-package goplayground
+package _go
 
 import (
 	"fmt"
 	"slices"
 )
 
-func main() {
+func mainS() {
 	var a []int
 	fmt.Println("this is a slice ", a == nil)
 
