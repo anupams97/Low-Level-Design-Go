@@ -1,7 +1,7 @@
 package lot
 
 import (
-	"github.com/anupams97/Low-Level-Design-Go/parkinglot/vehicle"
+	"github.com/anupams97/Low-Level-Design-Go/lld/parkinglot/vehicle"
 	"sync"
 )
 

@@ -3,7 +3,7 @@ package lot
 import (
 	"errors"
 	"fmt"
-	"github.com/anupams97/Low-Level-Design-Go/parkinglot/vehicle"
+	"github.com/anupams97/Low-Level-Design-Go/lld/parkinglot/vehicle"
 )
 
 type ParkingSystem struct {
